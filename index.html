@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" data-workmode="logic">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="description" content="untitled_unmastered // Engineering Command Center" />
+  <meta name="color-scheme" content="dark" />
+  <title>untitled_unmastered // command_center</title>
+  <link rel="stylesheet" href="css/blueprint.css" />
+  <!-- no one man should have all that power. so it ships open. -->
+</head>
+<body>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <div class="masthead__id">
+      <h1 class="glitch" data-text="untitled_unmastered">untitled_unmastered</h1>
+      <p class="masthead__creed">// we all will be untitled, never to be mastered.</p>
+    </div>
+
+    <div class="masthead__controls">
+      <button id="add-btn" class="btn btn--primary">+ Add module</button>
+      <button id="edit-btn" class="btn">Edit</button>
+
+      <div class="ctrl">
+        <span class="ctrl__label">Swap</span>
+        <button id="workmode-toggle" class="swap" aria-label="Toggle work mode">
+          <span class="swap__face" data-mode="logic">Logic</span>
+          <span class="swap__face" data-mode="assembly">Assembly</span>
+        </button>
+      </div>
+
+      <div class="ctrl">
+        <span class="ctrl__label">Theme</span>
+        <div class="theme-row">
+          <select id="theme-select" class="theme-select" aria-label="Theme"></select>
+          <button id="theme-build-btn" class="icon-btn" title="Custom theme">[ + ]</button>
+        </div>
+      </div>
+
+      <button id="sound-btn" class="btn" title="Toggle sound">♪ Sound</button>
+      <button id="schematic-btn" class="btn">Schematics</button>
+      <button id="credits-btn" class="btn">Credits</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section id="empty" class="empty">
+      <div class="empty__mark">[ &nbsp; ]</div>
+      <h2>blank workspace</h2>
+      <p>// nothing is placed. the canvas is yours.</p>
+      <button id="empty-add" class="btn btn--primary btn--lg">+ Add module</button>
+      <p class="empty__hint">
+        50 instruments in the library · drag to arrange · long-press to edit
+      </p>
+    </section>
+    <div id="grid" class="grid" hidden></div>
+  </main>
+
+  <canvas id="osci" class="osci" aria-hidden="true"></canvas>
+
+  <!-- Module library -->
+  <div class="modal" id="library" aria-hidden="true">
+    <div class="modal__panel">
+      <div class="modal__bar">
+        <span class="tile__tag">LIB</span>
+        <span class="modal__title">Module library</span>
+        <input id="lib-search" class="lib-search" type="text"
+               placeholder="filter…" aria-label="Filter modules" />
+        <button class="icon-btn" id="lib-close" aria-label="Close">[ X ]</button>
+      </div>
+      <div class="modal__body">
+        <div id="lib-grid" class="lib-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom theme builder: background, main, accent -->
+  <div class="modal" id="theme-builder" aria-hidden="true">
+    <div class="modal__panel modal__panel--narrow">
+      <div class="modal__bar">
+        <span class="tile__tag">THM</span>
+        <span class="modal__title">Theme builder</span>
+        <button class="icon-btn" id="tb-close" aria-label="Close">[ X ]</button>
+      </div>
+      <div class="modal__body">
+        <p class="tip">Three colours. Background, the main colour used for
+          text and module lines, and the accent.</p>
+        <div class="tb-fields">
+          <label class="field">
+            <span>Background</span>
+            <input type="color" id="tb-bg" value="#000000" />
+          </label>
+          <label class="field">
+            <span>Main</span>
+            <input type="color" id="tb-main" value="#ffffff" />
+          </label>
+          <label class="field">
+            <span>Accent</span>
+            <input type="color" id="tb-accent" value="#ffffff" />
+          </label>
+        </div>
+        <div class="tb-preview" id="tb-preview">
+          <span>preview</span>
+          <span class="tb-dot"></span>
+        </div>
+        <div class="btnrow">
+          <button class="btn btn--primary" id="tb-apply">Apply theme</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Schematics: save / load a workspace and all its module data -->
+  <div class="modal" id="schematic-panel" aria-hidden="true">
+    <div class="modal__panel modal__panel--narrow">
+      <div class="modal__bar">
+        <span class="tile__tag">SCH</span>
+        <span class="modal__title">Schematics</span>
+        <button class="icon-btn" id="sch-close" aria-label="Close">[ X ]</button>
+      </div>
+      <div class="modal__body">
+        <p class="tip">Save the current grid — modules, order, sizes,
+          colours and every module's data — under a name. Load it back
+          any time, even after you've cleared the workspace.</p>
+        <div class="sch-save">
+          <input id="sch-name" type="text" placeholder="schematic name" />
+          <button class="btn btn--primary" id="sch-save">Save current</button>
+        </div>
+        <ul id="sch-list" class="loglist"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Credits -->
+  <div class="modal" id="credits-panel" aria-hidden="true">
+    <div class="modal__panel modal__panel--narrow">
+      <div class="modal__bar">
+        <span class="tile__tag">CR</span>
+        <span class="modal__title">Credits</span>
+        <button class="icon-btn" id="credits-close" aria-label="Close">[ X ]</button>
+      </div>
+      <div class="modal__body credits">
+        <h3>untitled_unmastered</h3>
+        <p class="credits__creed">"we all will be untitled, never to be mastered."</p>
+        <hr />
+        <p>A raw Engineering Command Center — a blank canvas, fifty modular
+          instruments, and a grid you arrange yourself.</p>
+        <dl class="credits__dl">
+          <dt>Concept</dt><dd>TwinSailsStudios</dd>
+          <dt>Design</dt><dd>Blueprint / CAD-schematic</dd>
+          <dt>Stack</dt><dd>Vanilla HTML · CSS · ES modules</dd>
+          <dt>State</dt><dd>localStorage · no backend · no tracking</dd>
+          <dt>Modules</dt><dd>50 + workspace editor + theme builder</dd>
+          <dt>Build</dt><dd>hand-wired, no framework</dd>
+        </dl>
+        <hr />
+        <p class="credits__small">Built to be owned, not mastered.
+          Fork it, break it, make it yours.</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
