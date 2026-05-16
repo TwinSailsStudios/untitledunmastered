@@ -1,264 +1,189 @@
-#untitled_unmastered //
-we all will be untitled, never to be mastered.
-
-A raw, industrial Engineering Command Center. A blank canvas featuring 102 modular instruments, a drag-to-arrange grid, synthesized audio feedback, per-module recoloring, and saveable workspace schematics. It uses a clean, schematic "blueprint" aesthetic with thin 1px lines, monospace text, and zero UI clutter.
-
-Built entirely with pure, vanilla HTML5, CSS3, and ES-module JavaScript. No build steps, no dependencies, no backend, and absolutely no tracking.
-
-Live Demo: https://twinsailsstudios.github.io/untitled_unmastered-/
-
-How it works
-The workspace starts completely empty so you can build your own custom setup from scratch.
-
-+ ADD MODULE opens the Module Library—102 different tools, filterable by group chips (FLOW · TIME · LEDGER · GRIND · DEV · LOG · SYS) and searchable by name.
-
-Drag to Rearrange: Click and drag a tile by its title bar to reorder it within the grid. A placeholder holds the slot while the grid reflows, and your layout saves instantly.
-
-EDIT Mode: Puts the workspace into "jiggle mode"—tiles wiggle and show an ✕ so you can quickly delete them.
-
-Modular Resizing (↔ / ↕): Use the buttons on any tile to change its footprint. Width spans 1–3 grid columns, and height scales the body. Both dimensions persist automatically per module.
-
-Synthesized Audio (♪): Built-in synthesized sound effects for every button click, module heartbeat (like the Pomodoro or Metronome), countdowns, and alarms. You can toggle this on or off instantly in the masthead.
-
-Per-Tile Paintbrush (✦): Click the paintbrush icon on a tile to recolor just that specific module (background, main text, and accent colors). It overrides the global theme independently and includes a quick reset button.
-
-Schematics System: Save your entire current grid layout and the internal data of every single module under a custom name. Clear the canvas for a fresh setup, and reload your saved configurations later without losing anything. Perfect for parking a set of modules you aren't using right now without wiping their data.
-
-SWAP Layouts: Instantly toggles between Logic view (dense text) and Assembly view (open layout).
-
-19 Theme Presets: Choose from themes like B&W (white-on-black default), Paper (black-on-white), Blueprint, Amber CRT, Terminal, Crimson, Cobalt, Mint, Rust, and more, or use the custom 3-color theme builder to make your own.
-
-Osci-Sync: A responsive bottom oscilloscope that pulses live to your keystrokes and active module heartbeats (Pomodoro, Metronome, Tabata, or Interval).
-
-Local Storage Sync: Your layout, module order, tile sizes, custom colors, and the internal state of every single module persist automatically in localStorage. Nothing ever leaves your browser except for the optional public GitHub profile fetch in the Paper Trail module.
-
-The 102 modules — what each one does
-TIME
-Stopwatch — Standard precision timer with start, stop, lap functionality, and a dedicated lap log.
-
-Countdown — Set custom minutes; counts down and flashes aggressively at zero.
-
-World Clock — Live synchronized time across UTC, New York, London, and Tokyo.
-
-Time Since — Tracks the exact elapsed time since a specific date and time.
-
-Days Until — Displays the total whole days remaining before a target deadline.
-
-Age Calculator — Breaks down your exact age in years, days, and hours from a birthdate.
-
-Alarm At — Triggers a visual alert when your local clock hits a set time.
-
-Lap Average — Tap to log laps and instantly see your last lap alongside a running average.
-
-FLOW
-Fire & Ice Pomodoro — Set your Fire (work) minutes; Ice (recovery) auto-calculates at a 1:2 ratio, and the cycle automatically flips between states.
-
-Metronome — Adjustable BPM generator with a synchronized visual pulse and audio heartbeat.
-
-Breathing Guide — A responsive box-breathing ring locked to a 4-second pace per phase.
-
-BPM Tapper — Tap a beat manually to read back the active tempo.
-
-Interval Trainer — Looping work and rest intervals with a live phase tagger.
-
-Work Sessions — Clock in and out to maintain a clean log of your exact session durations.
-
-Tabata Timer — High-intensity 20/10-style rounds tracking work, rest, and round counts.
-
-Chess Clock — A two-sided countdown timer; tap your side to pass the turn to the opponent.
-
-Break Reminder — Background monitor that nudges you to stand up every N minutes.
-
-LEDGER
-Universal Money Jar — Input your rate, goal, and logged hours to get live calculations of earnings and forecasts with a progress bar.
-
-Tip & Split — Calculates a bill total plus tip percentage across N people, breaking down the total and cost per head.
-
-Unit Converter — Quick conversions for distance (km/mi), weight (kg/lb), temp (°C/°F), and length (cm/in).
-
-Percentage — Solves "x% of y" queries and structural ratio percentages.
-
-Rate Card — A saved references list of your standard events and their corresponding hourly rates.
-
-Earnings Ticker — Clock in to watch your earnings accrue live down to the second.
-
-Budget Jar — A simple, running positive/negative ledger that tallies your net total.
-
-Work Hours — Input your check-in and check-out times, subtract breaks, and output total hours worked.
-
-Compound Interest — Principal, rate, and years calculation to find your future investment value.
-
-Loan / EMI — Input loan amount, interest rate, and months to output your exact monthly payment and total cost.
-
-Savings Goal — Tracks your financial progress against a set target, showing percentages and amount remaining.
-
-Markup / Margin — Input wholesale cost and retail price to output markup %, margin %, and net profit.
-
-Hourly → Salary — Translates an hourly rate into estimated weekly, monthly, and yearly salaries based on standard hours.
-
-Break-even — Fixed costs divided by unit margin to calculate your exact break-even point in units.
-
-ROI — Compares invested capital vs returns to output a net profit and clean ROI %.
-
-Invoice Lines — Quantity × price line-item generator with an active running total.
-
-Split Tab — Records who paid what on a group trip or dinner, calculating exactly who owes who.
-
-Net from Gross — Deducts a flat tax percentage from gross income to output net pay and total tax withheld.
-
-GRIND
-Grit Streak — Heartbeat cells that fill in for every active day to track your consecutive daily streak.
-
-Habit Grid — Monitor multiple daily habits simultaneously with individual streak counters.
-
-Daily Goal — A simple counter measured against a daily target with a tracking progress bar.
-
-Tally Counter — A plain, distraction-free increment and decrement clicker.
-
-Water Intake — Tracks 8 glasses of water a day with a daily manual reset.
-
-Rep Counter — Count individual workout reps and bank your completed sets.
-
-Focus Ratio — Compares active focus minutes against distraction minutes to give you an absolute focus percentage.
-
-Pomodoro Count — Tracks the total number of complete Pomodoro blocks finished today.
-
-Anti-Todo — A running retrospective log of tasks you have already knocked out.
-
-DEV
-GitHub Paper Trail — Fetches recent public commits for any valid GitHub handle (falls back to an offline sample if disconnected).
-
-JSON Formatter — Validates and pretty-prints raw JSON strings with proper indentation.
-
-JSON Minify — Strips whitespace to compress a JSON block down into a single line.
-
-Base64 — Quick tool to encode or decode text strings.
-
-URL Encode — Encodes or decodes URI components safely.
-
-String Escape — Escapes or unescapes strings specifically for JSON compliance.
-
-Hash — Generates a rapid djb2 hash of any text input.
-
-UUID — Generates a standard v4 unique identifier string.
-
-Regex Tester — Evaluates regex patterns and flags against a test string with live match highlighting.
-
-Char Count — Instantly counts total characters, words, and lines.
-
-Case Converter — Converts text blocks between UPPER, lower, snake_case, and Title Case.
-
-Lorem — Generates N words of standard placeholder text.
-
-Color → Mono — Calculates the luminance of any picked hex color and outputs it as a gray hex.
-
-Snippet Vault — A central repository for saved code snippets; click any entry to copy it to your clipboard.
-
-Markdown Scratch — A minimal text pad providing a live preview of small Markdown blocks.
-
-Markdown Table — Convert raw CSV rows into a properly formatted Markdown structural table.
-
-Line Diff — Runs a line-by-line structural diff comparison between two text blocks.
-
-Number Base — Converts decimal inputs directly into binary, octal, and hexadecimal.
-
-Epoch ↔ Date — Converts Unix epoch seconds to ISO dates and vice versa.
-
-Slugify — Converts standard text strings into URL-safe, lowercase slugs.
-
-HTML Entities — Escapes and unescapes raw HTML characters.
-
-Query String — Parses complex query strings like ?a=1&b=2 into clean key-value pairs.
-
-Text Reverse — Reverses the order of characters, words, or full lines.
-
-Word Frequency — Analyzes pasted text blocks to output the highest-repeating word counts.
-
-Dedupe Lines — Strips out all duplicate lines from a pasted text block.
-
-Sort Lines — Sorts text lines alphabetically (A→Z, Z→A) or sorted by character length.
-
-Clean Lines — Trims trailing whitespace and drops empty lines from a text block.
-
-HTTP Status — Input a status code to look up its official semantic meaning.
-
-MIME Lookup — Input a file extension to find its matching MIME type string.
-
-ASCII Table — A clean reference sheet for all printable ASCII characters.
-
-CSS Box Shadow — Tweak sliders to generate clean box-shadow CSS rules with a live visual preview.
-
-Cubic Bezier — Adjust four control points to output a valid cubic-bezier() CSS timing function.
-
-CSV → JSON — Parses a header row + rows into a formatted JSON array.
-
-JWT Decode — Decodes and prints the header and payload objects of a standard JSON Web Token.
-
-LOG
-Socratic Journal — A timestamped logging system that rotates random philosopher quotes as you write.
-
-Quick Notepad — A distraction-free, single-pane scratchpad that autosaves your inputs.
-
-Scratch Canvas — A minimal, freehand black-and-white digital sketchpad.
-
-Checklist — A straightforward tool to quickly add, check off, or delete tasks.
-
-Kanban-lite — A basic TODO → WIP → DONE project board; click a card to advance it to the next column.
-
-Decision Matrix — Input options and score them across variables; sorts automatically from high to low.
-
-Bookmark Rail — A simple dock for labeled hyperlinks that open directly in a new browser tab.
-
-Socratic Quote — Rolls a completely random philosopher line on command.
-
-Mood Log — A 5-level mood tracker that charts your mental state in a timestamped history.
-
-Gratitude 3 — A daily logs module to record three specific things you're grateful for.
-
-Win of the Day — Log one primary daily victory (directly hooks into your grit tracking).
-
-Reading List — Keep a digital catalog of your books with a quick read/unread state toggle.
-
-Idea Inbox — A high-speed capture pad designed for dropping raw ideas before they vanish.
-
-Eisenhower Matrix — Sorts your tasks into four classic quadrants: DO, PLAN, DELEGATE, or DROP.
-
-Random Picker — Quick choice generator featuring a list picker, random coin flipper, or standard D6 dice roller.
-
-SYS
-Raw Diagnostics — Live technical readouts showing application uptime, typing velocity, and shifting coordinate matrices.
-
-Project Gauntlet — Input project start and target deadlines to display a live, ticking % progress bar.
-
-Tech Asset Vault — A tagged image gallery displayed in a desaturated, hover-to-reveal aesthetic.
-
-System Info — Reads hardware cores, browser language, screen resolution, active viewport dimensions, platform architecture, and online status.
-
-Keyboard Tester — Captures any keypress to output the exact key string, underlying code, and active modifiers.
-
-Video — Embed any public YouTube stream URL, or record raw clips directly from your connected camera to download locally.
-
-Picture — Take photos directly from your web camera and download the snapshots instantly.
-
-Credits — Underlying technical attributions and project authorship.
-
-Manifesto — The official, unmastered creative creed.
-
-Running it
-Because this project is a purely static site, it runs out of the box. To run it locally or host it:
-
-Bash
-# Locally (ES modules require a local HTTP server context, not file://)
-python3 -m http.server 8080   # then open http://localhost:8080
-The live project is hosted on GitHub Pages deployed directly from main (using the repository root, with a .nojekyll file included to bypass processing). Pushing any update to main redeploys the site live in roughly one minute. Because there is no build step, it can be deployed on any static provider (Netlify, Vercel, or Cloudflare Pages) simply by pointing the provider to the repository root with no build commands required.
-
-Project Structure
-index.html          # Core application shell: masthead, empty states, grid container, modals
-css/blueprint.css   # System tokens, layout grids, jiggle animation configurations, resizing rules
-js/util.js          # Helper library: el() builder, scoped data storage controls, pub/sub event bus
-js/registry.js      # Monolithic registry housing the 102 self-contained module factories
-js/sfx.js           # Sound effects engine built on native Web Audio synthesis
-js/themes.js        # Theme database table and the 3-color custom theme generator logic
-js/workspace.js     # Workspace controller: grid reflow, module addition/deletion, drag physics, painting, schematics
-js/main.js          # Application bootstrap: initial theme load, workmode states, oscilloscope wiring, initialization
-All application state is kept entirely in browser localStorage under the uu_ namespace.
+# untitled_unmastered //
+
+> we all will be untitled, never to be mastered.
+
+untitled_unmastered is a raw, minimalist task planner built on customizability. It's loosly based off of Kendrick Lamar's album: "Untitled Unmastered".
+The main gimmick of the site is modules, you can add modules, drag and drop modules, and customize everything to your liking. Once your done, save the schematic and make a new one.
+You can save and load schematics for many things. I'm not too good at explaining so if your intrested, check out the site.
+
+FUN FACT:
+
+untitled_unmastered was supposed to be called Corkboard, based off of 90's corkboard planning. (iykyk)
+
+**Live:** https://twinsailsstudios.github.io/untitled_unmastered-/
+
+---
+
+## How it works
+
+The workspace starts **empty** — you compose your own command center.
+
+- **`+ ADD MODULE`** opens the **Module Library** — 102 instruments,
+  filterable by group chips (FLOW · TIME · LEDGER · GRIND · DEV · LOG ·
+  SYS) and searchable by name.
+- **Drag a tile** by its title bar to **reorder** it within the grid —
+  a placeholder holds the slot and the grid reflows; order is saved.
+- **`EDIT`** enters jiggle mode — tiles wiggle and show a `✕` to remove.
+- **↔ / ↕** buttons on each tile resize it: width spans 1–3 grid
+  columns, height grows the body. Both persist per module.
+- **♪ Sound** — synthesised effects on every button, each module
+  heartbeat (Pomodoro / Metronome / Tabata …), countdowns and alarms;
+  toggle in the masthead.
+- **✦ paintbrush** on each tile recolours just that module
+  (background / main / accent), independent of the global theme, with a
+  clean reset.
+- **Schematics** — save the whole grid *and every module's data* under a
+  name, clear the canvas, and load it back later untouched. Good for
+  parking a set of modules you're done with without losing their data.
+- **SWAP** toggles Logic (dense text) ↔ Assembly (open layout).
+- **THEME** — 19 presets (B&W = white-on-black default, Paper =
+  black-on-white, plus Blueprint, Amber CRT, Terminal, Crimson, Cobalt,
+  Graphite, Sand, Vapor, Oceanic, Forest, Rose, Solar, Ultraviolet, Mint,
+  Rust, Ice, Noir) and a custom 3-colour builder.
+- **Osci-Sync** — the bottom oscilloscope pulses to keystrokes and any
+  module heartbeat (Pomodoro / Metronome / Tabata / Interval).
+- Layout, order, sizes, per-tile colour and every module's state persist
+  in `localStorage`. Nothing leaves the browser except the optional public
+  GitHub fetch in Paper Trail.
+
+---
+
+## The 102 modules — what each one does
+
+### TIME
+- **Stopwatch** — start/stop/lap timer with a lap log.
+- **Countdown** — set minutes, counts down, flashes at zero.
+- **World Clock** — live time across UTC, NY, London, Tokyo.
+- **Time Since** — elapsed time since a chosen date/time.
+- **Days Until** — whole days remaining to a target date.
+- **Age Calculator** — exact age in years / days / hours from a birthdate.
+- **Alarm At** — fires a visual alert at a set clock time.
+- **Lap Average** — tap laps, shows last and running average.
+
+### FLOW
+- **Fire & Ice Pomodoro** — set Fire (work) minutes; Ice (recovery)
+  auto-derives at the 1:2 ratio and the cycle auto-flips.
+- **Metronome** — adjustable BPM with a visual pulse + heartbeat.
+- **Breathing Guide** — box-breathing ring, 4s per phase.
+- **BPM Tapper** — tap a beat, reads back the tempo.
+- **Interval Trainer** — repeating work/rest seconds with phase tag.
+- **Work Sessions** — clock in/out; logs each session's duration.
+- **Tabata Timer** — 20/10-style rounds with work/rest and round count.
+- **Chess Clock** — two-sided countdown; tap to pass the turn.
+- **Break Reminder** — nudges you to stand up every N minutes.
+
+### LEDGER
+- **Universal Money Jar** — rate × goal × logged hours → live earned and
+  forecast with a progress bar.
+- **Tip & Split** — bill + tip % across N people, total and per-head.
+- **Unit Converter** — km/mi, kg/lb, °C/°F, cm/in.
+- **Percentage** — "x% of y" and ratio percentages.
+- **Rate Card** — saved list of events and their hourly rates.
+- **Earnings Ticker** — clock in and watch money accrue live.
+- **Budget Jar** — running ± ledger with net total.
+- **Work Hours** — in/out time minus break → hours worked.
+- **Compound Interest** — principal/rate/years → future value.
+- **Loan / EMI** — amount/rate/months → monthly payment and total.
+- **Savings Goal** — goal vs saved, % and amount remaining.
+- **Markup / Margin** — cost & price → markup %, margin %, profit.
+- **Hourly → Salary** — rate × hours → week / month / year.
+- **Break-even** — fixed cost ÷ unit margin → break-even units.
+- **ROI** — invested vs returned → ROI % and net.
+- **Invoice Lines** — qty × price line items with a running total.
+- **Split Tab** — who paid what → who owes / is owed.
+- **Net from Gross** — gross minus a flat tax % → net and tax.
+
+### GRIND
+- **Grit Streak** — heartbeat cells that fill per active day; counts the
+  consecutive streak.
+- **Habit Grid** — multiple habits, daily toggle, per-habit streak.
+- **Daily Goal** — counter against a target with a progress bar.
+- **Tally Counter** — plain increment/decrement counter.
+- **Water Intake** — eight glasses a day, resets daily.
+- **Rep Counter** — count reps, bank sets.
+- **Focus Ratio** — focus vs distraction minutes → % focused.
+- **Pomodoro Count** — pomodoros completed today.
+- **Anti-Todo** — a log of what you *already* finished.
+
+### DEV
+- **GitHub Paper Trail** — recent public push commits for any handle
+  (falls back to a labelled sample offline).
+- **JSON Formatter** — pretty-print / validate JSON.
+- **JSON Minify** — collapse JSON to one line.
+- **Base64** — encode / decode text.
+- **URL Encode** — encode / decode URI components.
+- **String Escape** — JSON-escape / unescape a string.
+- **Hash** — quick djb2 hash of input.
+- **UUID** — generate a v4 UUID.
+- **Regex Tester** — pattern + flags against a test string, live matches.
+- **Char Count** — chars / words / lines.
+- **Case Converter** — UPPER / lower / snake / Title.
+- **Lorem** — N words of placeholder text.
+- **Color → Mono** — luminance of a picked colour as a grey hex.
+- **Snippet Vault** — saved snippets, click to copy.
+- **Markdown Scratch** — live tiny-Markdown preview.
+- **Markdown Table** — CSV rows → a Markdown table.
+- **Line Diff** — line-by-line diff of two blocks.
+- **Number Base** — decimal → bin / oct / hex.
+- **Epoch ↔ Date** — Unix seconds ↔ ISO date.
+- **Slugify** — text → url-safe slug.
+- **HTML Entities** — escape / unescape HTML.
+- **Query String** — parse `?a=1&b=2` into pairs.
+- **Text Reverse** — reverse chars / words / lines.
+- **Word Frequency** — top word counts in pasted text.
+- **Dedupe Lines** — drop duplicate lines.
+- **Sort Lines** — A→Z, Z→A, by length.
+- **Clean Lines** — trim and drop blank lines.
+- **HTTP Status** — code → meaning.
+- **MIME Lookup** — file extension → MIME type.
+- **ASCII Table** — printable ASCII reference.
+- **CSS Box Shadow** — sliders → a `box-shadow` value + preview.
+- **Cubic Bezier** — four control points → a `cubic-bezier()`.
+- **CSV → JSON** — header row + rows → JSON array.
+- **JWT Decode** — decode a JWT's header and payload.
+
+### LOG
+- **Socratic Journal** — timestamped log under a rotating philosopher
+  quote.
+- **Quick Notepad** — a single autosaving scratch pad.
+- **Scratch Canvas** — freehand B&W sketch pad.
+- **Checklist** — add / tick / remove tasks.
+- **Kanban-lite** — TODO → WIP → DONE, click a card to advance.
+- **Decision Matrix** — scored options, sorted high to low.
+- **Bookmark Rail** — labelled links, opens in a new tab.
+- **Socratic Quote** — rolls a random philosopher line.
+- **Mood Log** — five-level mood, timestamped history.
+- **Gratitude 3** — three things, kept per day.
+- **Win of the Day** — log a daily win (counts as grit).
+- **Reading List** — books with a read/unread toggle.
+- **Idea Inbox** — fast capture for raw ideas.
+- **Eisenhower Matrix** — DO / PLAN / DELEGATE / DROP quadrants.
+- **Random Picker** — pick from a list, coin flip, or D6.
+
+### SYS
+- **Raw Diagnostics** — uptime, keystroke velocity, drifting coordinates.
+- **Project Gauntlet** — start/end dates → a live % progress bar.
+- **Tech Asset Vault** — tagged image gallery (desaturated, hover-reveal).
+- **System Info** — cores, language, screen, viewport, platform, online.
+- **Keyboard Tester** — shows key, code and modifiers for any keypress.
+- **Video** — embed a YouTube URL, or record from your camera and
+  download the clip.
+- **Picture** — take a photo from your camera and download it.
+- **Credits** — what this is and who made it.
+- **Manifesto** — the unmastered creed.
+
+---
+## Structure
+
+```
+index.html         # shell: masthead, empty state, grid, modals
+css/blueprint.css   # tokens, grid/tiles, jiggle, sizing, motion
+js/util.js          # element builder el(), scoped store, pub/sub bus
+js/registry.js      # the 102 self-contained module factories
+js/sfx.js           # synthesised Web Audio sound effects
+js/themes.js        # preset table + custom 3-colour theme builder
+js/workspace.js     # grid, add/remove, drag, sizing, paint, schematics
+js/main.js          # bootstrap: theme, workmode, osci, credits, workspace
+```
+
+State lives in `localStorage` (namespace `uu_`).
