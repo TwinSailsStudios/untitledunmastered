@@ -10,7 +10,15 @@ FUN FACT:
 
 untitled_unmastered was supposed to be called Corkboard, based off of 90's corkboard planning. (iykyk)
 
-**Live:** https://twinsailsstudios.github.io/untitled_unmastered-/
+HOW AI WAS USED IN THIS PROJECT:
+
+AI was used for some heavy debugging since this is my first CSS & Javascript project.
+It helped me alot with the embed modules (Picture & Video), aswell as the sound and shaking animations while editing.
+It generated the credits module, as well as the tip calculator (it took me like an hour js to get a working prototype 😭)
+I did also use github's built in copilot to generate commit messages.
+if i had to say this is like 70% me and 30% ai.
+
+**Live:** https://twinsailsstudios.github.io/untitledunmastered/
 
 ---
 
@@ -186,4 +194,4 @@ js/workspace.js     # grid, add/remove, drag, sizing, paint, schematics
 js/main.js          # bootstrap: theme, workmode, osci, credits, workspace
 ```
 
-State lives in `localStorage` (namespace `uu_`).
+orginally built for flavortown
