@@ -1,4 +1,4 @@
-untitled_unmastered //
+#untitled_unmastered //
 we all will be untitled, never to be mastered.
 
 A raw, industrial Engineering Command Center. A blank canvas featuring 102 modular instruments, a drag-to-arrange grid, synthesized audio feedback, per-module recoloring, and saveable workspace schematics. It uses a clean, schematic "blueprint" aesthetic with thin 1px lines, monospace text, and zero UI clutter.
