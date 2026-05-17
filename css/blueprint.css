@@ -1,8 +1,5 @@
-/* untitled_unmastered — the blueprint look.
-   Black background, one main colour for text and the 1px lines, an accent.
-   Themes are injected at runtime (see js/themes.js) by overriding the
-   custom properties below, so there's deliberately no per-theme CSS here —
-   these values are just the default before the theme module runs. */
+/* untitled_unmastered - the blueprint look.
+    */
 
 :root {
   --paper: #000;                       /* background */
