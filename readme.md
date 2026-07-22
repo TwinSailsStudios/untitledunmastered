@@ -1,5 +1,6 @@
 # untitled_unmastered //
 ## we all will be untitled, never to be mastered.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/77aa486e-5d32-4ec6-b90b-3d394a285e6d" />
 
 ### untitled_unmastered is a raw, minimalist task planner built entirely around customizability. It's loosely inspired by Kendrick Lamar's album, Untitled Unmastered. (the whole part of this was that this was just a collection of scrapped projects merged into one)
 
