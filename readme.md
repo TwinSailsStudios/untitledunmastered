@@ -1,5 +1,5 @@
-untitled_unmastered //
-we all will be untitled, never to be mastered.
+# untitled_unmastered //
+## we all will be untitled, never to be mastered.
 
 untitled_unmastered is a raw, minimalist task planner built entirely around customizability. It's loosely inspired by Kendrick Lamar's album, Untitled Unmastered.
 
