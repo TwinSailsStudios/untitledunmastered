@@ -1,7 +1,7 @@
 # untitled_unmastered //
 ## we all will be untitled, never to be mastered.
 
-untitled_unmastered is a raw, minimalist task planner built entirely around customizability. It's loosely inspired by Kendrick Lamar's album, Untitled Unmastered.
+### untitled_unmastered is a raw, minimalist task planner built entirely around customizability. It's loosely inspired by Kendrick Lamar's album, Untitled Unmastered. (the whole part of this was that this was just a collection of scrapped projects merged into one)
 
 The core concept of the site is "modules." You can add, drag, drop, and tweak these modules to build a workspace that perfectly fits your workflow. Once you're happy with your setup, you can save it as a "schematic" and start a fresh one.
 
@@ -11,7 +11,7 @@ FUN FACT:
 
 untitled_unmastered was originally going to be called Corkboard, inspired by those classic 90s physical corkboard planners. (iykyk)
 
-HOW AI WAS USED IN THIS PROJECT:
+### HOW AI WAS USED IN THIS PROJECT:
 
 Because this was my very first CSS and JavaScript project, AI was a lifesaver for some heavy debugging.
 It helped me out a ton with the embed modules (Picture & Video), as well as dialing in the sound effects and the shaking animations during edit mode.
@@ -19,9 +19,9 @@ It also generated the credits module and the tip calculator (which honestly took
 I also used GitHub's built-in Copilot to help write clean commit messages.
 If I had to break it down, this project is about 70% me and 30% AI.
 
-Live: https://twinsailsstudios.github.io/untitledunmastered/
+## Live: https://twinsailsstudios.github.io/untitledunmastered/
 
-How it works
+### How it works
 The workspace starts as a blank canvas. It's up to you to compose your own command center.
 
 + ADD MODULE opens the Module Library. There are currently 102 instruments/modules,
@@ -31,7 +31,7 @@ SYS) and searchable by name.
 Drag a tile by its title bar to reorder it within the grid —
 a placeholder holds the slot and the grid reflows; your custom order is always saved.
 
-EDIT enters jiggle mode — tiles wiggle and show a ✕ so you can quickly remove them.
+EDIT enters edit mode (who woulda guessed) — tiles wiggle and show a ✕ so you can quickly remove them. - based off of the apple edit feature
 
 ↔ / ↕ buttons on each tile resize it: width spans 1–3 grid
 columns, while the height grows the body. Both settings persist per module.
@@ -53,15 +53,15 @@ black-on-white, plus Blueprint, Amber CRT, Terminal, Crimson, Cobalt,
 Graphite, Sand, Vapor, Oceanic, Forest, Rose, Solar, Ultraviolet, Mint,
 Rust, Ice, Noir) and a custom 3-colour builder to make it your own.
 
-Osci-Sync — the bottom oscilloscope pulses to your keystrokes and any
-module heartbeat (Pomodoro / Metronome / Tabata / Interval).
+Heartbeat/Oscilloscope — the bottom oscilloscope pulses to your keystrokes and any
+module heartbeat (Pomodoro / Metronome / Tabata / Interval). lwky tuff ngl
 
 Layout, order, sizes, per-tile colours, and every module's state securely persist
 in your browser's localStorage. Nothing ever leaves the browser except for the optional public
 GitHub fetch in the Paper Trail module.
 
 The 102 modules — what each one does
-TIME
+### TIME
 Stopwatch — start/stop/lap timer with a running lap log.
 
 Countdown — set the minutes, watch it count down, and it flashes at zero.
@@ -78,7 +78,7 @@ Alarm At — fires a visual alert at a specific clock time.
 
 Lap Average — tap your laps, and it shows the last and running average.
 
-FLOW
+### FLOW
 Fire & Ice Pomodoro — set Fire (work) minutes; Ice (recovery)
 auto-derives at a 1:2 ratio and the cycle auto-flips for you.
 
@@ -98,7 +98,7 @@ Chess Clock — two-sided countdown; tap to pass the turn.
 
 Break Reminder — a friendly nudge to stand up every N minutes.
 
-LEDGER
+### LEDGER
 Universal Money Jar — rate × goal × logged hours → live earned cash and a
 forecast with a progress bar.
 
@@ -287,4 +287,6 @@ js/sfx.js          # synthesised Web Audio sound effects
 js/themes.js       # preset table + custom 3-colour theme builder
 js/workspace.js    # grid, add/remove, drag, sizing, paint, schematics
 js/main.js         # bootstrap: theme, workmode, osci, credits, workspace
-(P.S. This project was originally built for Flavortown!)
+
+```
+(P.S. This project was originally built for Flavortown, but was never submitted!)
