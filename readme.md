@@ -277,7 +277,7 @@ Picture — snap a photo from your webcam and download it immediately.
 Credits — a rundown of what this project is and who made it.
 
 Manifesto — the unmastered creed.
-
+```
 Structure
 index.html         # shell: masthead, empty state, grid, modals
 css/blueprint.css  # tokens, grid/tiles, jiggle, sizing, motion
