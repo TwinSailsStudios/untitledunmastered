@@ -4,7 +4,7 @@
 
 ### untitled_unmastered is a raw, minimalist task planner built entirely around customizability. It's loosely inspired by Kendrick Lamar's album, Untitled Unmastered. (the whole part of this was that this was just a collection of scrapped projects merged into one)
 
-The core concept of the site is "modules." You can add, drag, drop, and tweak these modules to build a workspace that perfectly fits your workflow. Once you're happy with your setup, you can save it as a "schematic" and start a fresh one.
+The core concept of the site is modules. You can add, drag, drop, and tweak these modules to build a workspace that perfectly fits your workflow. Once you're happy with your setup, you can save it as a schematic and start a fresh one.
 
 You can build and save schematics for practically anything. I'm not always the best at explaining it, so if you're interested, definitely check out the live site and play around with it!
 
@@ -61,7 +61,9 @@ Layout, order, sizes, per-tile colours, and every module's state securely persis
 in your browser's localStorage. Nothing ever leaves the browser except for the optional public
 GitHub fetch in the Paper Trail module.
 
-The 102 modules — what each one does
+## WHAT EACH MODULE DOES: 
+(best way to see, is to just use the site and find out)
+
 ### TIME
 Stopwatch — start/stop/lap timer with a running lap log.
 
