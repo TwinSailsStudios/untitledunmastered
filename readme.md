@@ -16,8 +16,8 @@ untitled_unmastered was originally going to be called Corkboard, inspired by tho
 Because this was my very first CSS and JavaScript project, AI was a lifesaver for some heavy debugging.
 It helped me out a ton with the embed modules (Picture & Video), as well as dialing in the sound effects and the shaking animations during edit mode.
 It also generated the credits module and the tip calculator (which honestly took me about an hour just to get a working prototype going 😭).
-I also used GitHub's built-in Copilot to help write clean commit messages.
-If I had to break it down, this project is about 70% me and 30% AI.
+I also used GitHub's built-in Copilot to help write clean commit messages. AI also helped with site design.
+If I had to break it down, this project is about 70% me and 30% AI. almost forgot, some of the module ideas were done by AI, but not coded by it, i would like to make this without ai used like a crutch so ill prolly try to remaster this.
 
 ## Live: https://twinsailsstudios.github.io/untitledunmastered/
 
@@ -136,7 +136,7 @@ Split Tab — tracks who paid what → perfectly calculates who owes / is owed.
 
 Net from Gross — gross minus a flat tax % → your take-home net and tax paid.
 
-GRIND
+### GRIND
 Grit Streak — heartbeat cells that fill per active day; tracks your
 consecutive streak.
 
@@ -156,7 +156,7 @@ Pomodoro Count — how many pomodoros you crushed today.
 
 Anti-Todo — a satisfying log of what you've already finished.
 
-DEV
+### DEV
 GitHub Paper Trail — recent public push commits for any handle
 (falls back to a labelled sample if you're offline).
 
@@ -226,7 +226,7 @@ CSV → JSON — header row + rows → nicely formatted JSON array.
 
 JWT Decode — safely decode a JWT's header and payload.
 
-LOG
+### LOG
 Socratic Journal — a timestamped log nested under a rotating philosopher's
 quote.
 
@@ -258,7 +258,7 @@ Eisenhower Matrix — categorize into DO / PLAN / DELEGATE / DROP quadrants.
 
 Random Picker — pick randomly from a list, flip a coin, or roll a D6.
 
-SYS
+### SYS
 Raw Diagnostics — displays your uptime, keystroke velocity, and drifting coordinates.
 
 Project Gauntlet — start/end dates → a live % progress bar of your timeline.
